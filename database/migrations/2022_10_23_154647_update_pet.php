@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('pets', function (Blueprint $table) {
             //
-            $table->string('status')->default(0)->change();
+            $table->integer('status')->default(0)->change();
         });
     }
 
