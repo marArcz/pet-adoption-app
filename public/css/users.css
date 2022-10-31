@@ -1,0 +1,181 @@
+#navbar-main {
+  border: 1px solid rgb(235, 235, 235);
+}
+#navbar-main .user-photo {
+  width: 3rem;
+  height: 3rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-left: 4rem;
+  box-shadow: 1px 1px 10px rgb(177, 177, 177);
+  border: 1px solid white !important;
+}
+@media screen and (max-width: 768px) {
+  #navbar-main .user-photo {
+    text-align: center;
+    margin: auto !important;
+  }
+}
+
+#hero-main {
+  min-height: 90vh !important;
+  width: 100%;
+  background: url("../img/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.search-input .icon {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+}
+.search-input .form-control {
+  padding-left: 30px !important;
+}
+
+.category-list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.category-list .category-option {
+  padding: 10px 20px;
+  background: #EFEFEF;
+  border-radius: 8px;
+  box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+.category-list .category-option * {
+  color: #696969 !important;
+}
+.category-list .category-option.active {
+  background: #36B37E;
+  box-shadow: 0px 4px 2px rgba(17, 17, 17, 0.15) !important;
+}
+.category-list .category-option.active * {
+  color: white !important;
+}
+
+.dots-loader {
+  display: flex;
+  justify-content: center;
+}
+.dots-loader div {
+  -webkit-animation: 1.5s load-anim infinite linear;
+          animation: 1.5s load-anim infinite linear;
+  width: 10px;
+  height: 10px;
+  background: #696969;
+  border-radius: 50%;
+  margin-left: 10px;
+  opacity: 1;
+}
+.dots-loader div:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  margin-left: 0 !important;
+}
+.dots-loader div:nth-child(2) {
+  -webkit-animation-delay: 0.5s !important;
+          animation-delay: 0.5s !important;
+}
+.dots-loader div:nth-child(3) {
+  -webkit-animation-delay: 1s !important;
+          animation-delay: 1s !important;
+}
+@-webkit-keyframes load-anim {
+  10% {
+    opacity: 0.4;
+    transform: scale(1.1, 1.1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1.1, 1.1);
+  }
+}
+@keyframes load-anim {
+  10% {
+    opacity: 0.4;
+    transform: scale(1.1, 1.1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1.1, 1.1);
+  }
+}
+
+.pet-card:hover .pet-img {
+  box-shadow: 0px 7px 10px rgb(184, 183, 183) !important;
+}
+.pet-card .pet-img {
+  transition: 200ms all;
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1.5rem;
+  margin-bottom: 20px;
+}
+.pet-card .pet-card-body {
+  padding: 0 10px;
+}
+
+#schedule-calendar .weekdays {
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: start;
+  grid-template-columns: repeat(7, 14.2857142857%);
+}
+#schedule-calendar .calendar-body {
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: start;
+  grid-template-columns: repeat(7, 14.2857142857%);
+  gap: 10px 0 !important;
+  margin-top: 10px;
+}
+#schedule-calendar .calendar-body .calendar-day {
+  border: none !important;
+}
+#schedule-calendar .calendar-body .calendar-day.current:not(.selected).available {
+  color: rgb(7, 107, 32);
+}
+#schedule-calendar .calendar-body .calendar-day.current:not(.selected).full {
+  color: rgb(88, 13, 13);
+}
+#schedule-calendar .calendar-body .calendar-day.available:not(.selected) {
+  background: rgba(24, 196, 53, 0.2) !important;
+  cursor: pointer;
+}
+#schedule-calendar .calendar-body .calendar-day.full:not(.selected) {
+  background: rgba(182, 18, 18, 0.2) !important;
+  cursor: not-allowed !important;
+  border: none !important;
+}
+#schedule-calendar .calendar-body .calendar-day.selected {
+  background: #FBC02D;
+  color: black;
+}/*# sourceMappingURL=users.css.map */

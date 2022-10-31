@@ -1,0 +1,231 @@
+@import './colors';
+$navbar-h: 10vh;
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../GIL_____.TTF');
+}
+
+#navbar-main {
+    // min-height:$navbar-h;
+    border: 1px solid rgb(235, 235, 235);
+
+  
+}
+
+.user-photo {
+    $photo-size: 3rem;
+    width: $photo-size;
+    height: $photo-size;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin-left: 4rem;
+    box-shadow: 1px 1px 10px rgb(177, 177, 177);
+    border: 1px solid white !important;
+
+    @media screen and (max-width:768px) {
+        & {
+            text-align: center;
+            margin: auto !important;
+        }
+    }
+}
+
+.dropdown-toggle.user-photo{
+    &::after{
+        display: none !important;
+    }
+}
+
+#hero-main {
+    min-height: calc(100vh - $navbar-h) !important;
+    width: 100%;
+    background: url('../img/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 110%;
+    // background-attachment: fixed;
+}
+
+.search-input {
+    $left-offset: 10px;
+    $padding-left: calc($left-offset * 3);
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .icon {
+        position: absolute;
+        top: 12px;
+        left: $left-offset;
+    }
+
+    .form-control {
+        padding-left: $padding-left !important;
+    }
+}
+
+.category-list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+
+    .category-option {
+        padding: 10px 20px;
+        background: #EFEFEF;
+        border-radius: 8px;
+        box-shadow: 0px 4px 2px rgba(#000, 0.15);
+        border: none;
+
+        * {
+            color: #696969 !important;
+        }
+
+        &.active {
+            background: $success;
+            box-shadow: 0px 4px 2px rgba(#111, 0.15) !important;
+
+            * {
+                color: white !important;
+
+
+            }
+        }
+    }
+}
+
+.dots-loader {
+    display: flex;
+    justify-content: center;
+
+    div {
+        animation: 1.5s load-anim infinite linear;
+        width: 10px;
+        height: 10px;
+        background: #696969;
+        border-radius: 50%;
+        margin-left: 10px;
+        opacity: 1;
+    }
+
+    div:nth-child(1) {
+        animation-delay: 0s;
+        margin-left: 0 !important;
+
+    }
+
+    div:nth-child(2) {
+        animation-delay: .5s !important;
+    }
+
+    div:nth-child(3) {
+        animation-delay: 1s !important;
+    }
+
+    @keyframes load-anim {
+        10% {
+            opacity: 0.4;
+            transform: scale(1.1, 1.1);
+
+        }
+
+        50% {
+            opacity: 1;
+            transform: scale(1.2, 1.2);
+
+        }
+
+        100% {
+            opacity: 0.4;
+            transform: scale(1.1, 1.1);
+
+        }
+    }
+}
+
+.pet-card {
+    &:hover {
+        .pet-img {
+            box-shadow: 0px 7px 10px rgb(184, 183, 183) !important;
+        }
+
+    }
+
+    .pet-img {
+        transition: 200ms all;
+        width: 100%;
+        height: 250px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 1.5rem;
+        margin-bottom: 20px;
+        
+
+
+    }
+
+    .pet-card-body {
+        padding: 0 10px;
+    }
+}
+
+#schedule-calendar {
+    .weekdays {
+        display: grid;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: start;
+        grid-template-columns: repeat(7, calc(100% / 7));
+    }
+
+    .calendar-body {
+        display: grid;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: start;
+        grid-template-columns: repeat(7, calc(100% / 7));
+        gap: 10px 0 !important;
+        margin-top: 10px;
+
+        .calendar-day {
+            border: none !important;
+            &.current:not(.selected) {
+                &.available {
+                    color: rgb(7, 107, 32);
+                }
+
+                &.full {
+                    color: rgb(88, 13, 13);
+                }
+            }
+
+            &.available:not(.selected) {
+                background: rgba(rgb(24, 196, 53), 0.2) !important;
+                cursor: pointer;
+            }
+
+            &.full:not(.selected) {
+                background: rgba(rgb(182, 18, 18), 0.2) !important;
+                cursor: not-allowed !important;
+                border: none !important;
+            }
+
+            &.selected {
+                background: $warning;
+                color: black;
+            }
+        }
+    }
+}
+
+#nav-dropdown{
+    .dropdown-item{
+        
+    }
+}

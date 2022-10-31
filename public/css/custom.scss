@@ -1,0 +1,52 @@
+/* The following block can be included in a custom.scss */
+
+/* make the customizations */
+
+$breadcrumb-divider-color: #6554c0;
+$breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8'><path d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='#{$breadcrumb-divider-color}'/></svg>");
+$theme-colors: (
+    "warning":#FBC02D,
+    "secondary":#334444,
+    "success":#36B37E,
+    "purple":#6554C0,
+    "poppy":#FF5630,
+    "gray":#6c757d,
+    "blue":#00B8D9,
+    "light":#f8f9fa,
+);
+
+
+$dropdown-link-active-bg:rgb(235, 235, 235);
+
+
+
+
+/* import bootstrap to set changes */
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.btn-success{
+    color: white !important;
+}
+.btn-purple{
+    color: white !important;
+}
+.btn-poppy{
+    color: white !important;
+}
+
+.btn-outline-success:hover{
+    color: white !important;
+}
+.btn-outline-poppy:hover{
+    color: white !important;
+}
+
+.dropdown{
+    &.no-toggle{
+        .dropdown-toggle{
+            &::after{
+                display: none !important;
+            }
+        }
+    }
+}
