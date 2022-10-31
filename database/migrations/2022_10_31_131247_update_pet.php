@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -13,10 +14,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('pets', function (Blueprint $table) {
-            //
-            $table->integer("status")->default(1)->change();
-        });
+        DB::statement('ALTER TABLE pets ALTER COLUMN 
+        status TYPE integer USING (status)::integer');
     }
 
     /**
