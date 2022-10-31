@@ -8,5 +8,6 @@ export default defineConfig({
             input: ['resources/js/admin.jsx', 'resources/js/user.jsx','resources/css/users.css'],
             refresh: true,
         }),
+        react()
     ],
 });
