@@ -11,6 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    @viteReactRefresh
     @vite('resources/js/user.jsx')
 
 </head>
