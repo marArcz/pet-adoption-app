@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     @vite('resources/js/user.jsx')
-    @vite('resources/js/users.css')
 
 </head>
 
