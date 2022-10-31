@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { Form, Col, Row, Button, Image, InputGroup, Card } from 'react-bootstrap'
 
-import Logo from './images/logo-borderless.png'
+import Logo from '../../../../public/images/logo.png'
 import { hidePageLoader, showPageLoader } from '../PageLoader'
 import ProfilePic from './images/profile.jpg'
 import NavbarComponent from './NavbarComponent'
