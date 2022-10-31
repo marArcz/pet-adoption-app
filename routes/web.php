@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin/{route?}/{subpage?}/{action?}', function () {
     return view('admin.index');
 });
-Route::get('/{route?}/{subpage?}/{action?}', function () {
+Route::get('/{route?}/{subpage?}/{actio?}', function () {
     return view('users.index');
 });
 
