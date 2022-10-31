@@ -12,7 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import '@/assets/css/users.css'
 import App from './user-pages/App';
 
-axios.defaults.baseURL = 'http://localhost:8000/api';
+axios.defaults.baseURL = 'https://ghr-pet-adoption.herokuapp.com/api';
 
 ReactDOM.createRoot(document.getElementById("app")).render(
     <BrowserRouter basename='/'>

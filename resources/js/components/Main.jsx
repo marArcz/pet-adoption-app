@@ -17,7 +17,7 @@ import PageLoader from '@/user-pages/PageLoader';
 
 const Main = () => {
     // axios.defaults.baseURL = 'https://ghr-api.herokuapp.com/api/';
-    axios.defaults.baseURL = 'http://localhost:8000/api';
+    axios.defaults.baseURL = 'https://ghr-pet-adoption.herokuapp.com/api';
 
     useEffect(() => {
         setShowPreloader(true)
